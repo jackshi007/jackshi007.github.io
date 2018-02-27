@@ -1,13 +1,12 @@
-
 ---
-layout:     post                        # 使用的布局（不需要改）
+layout:     post                    # 使用的布局（不需要改）
 title:      My First Blog               # 标题 
-subtitle:   Hello World, Hello My Blog  # 副标题
-date:       2018-02-26                  # 时间
-author:     Jack                        # 作者
-header-img: img/post-bg-universe.jpg    # 这篇文章标题背景图片
-catalog: true                           # 是否归档
-tags:                                   # 标签
+subtitle:   Hello World, Hello My Blog #副标题
+date:       2018-02-26              # 时间
+author:     Jack                      # 作者
+header-img: img/post-bg-universe.jpg    #这篇文章标题背景图片
+catalog: true                       # 是否归档
+tags:                               #标签
     - 生活
 ---
 
