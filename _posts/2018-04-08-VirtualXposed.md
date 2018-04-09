@@ -1,8 +1,8 @@
 ---
 layout:     post                    # 使用的布局（不需要改）
-title:      [Android] VirtualXposed插件开发   # 标题 
+title:      VirtualXposed插件开发              # 标题 
 subtitle:   Xposed hook 之入门案例 #副标题
-date:       2018-04-09              # 时间
+date:       2018-04-09               # 时间
 author:     Jack                      # 作者
 header-img: img/post-bg-android.jpg    #这篇文章标题背景图片
 catalog: true                       # 是否归档
@@ -11,14 +11,13 @@ tags:                               #标签
     - Xposed
     - Hook
     - VirtualApp
-    
 ---
 
 
 ## [Android] Virtual Xposed插件开发：Xposed hook 之入门案例
 
 ### 一、什么是Virtual Xposed？
-##### Xposed
+#### Xposed
 众所周知Xposed是来自国外[XDA论坛](https://forum.xda-developers.com/)的rovo89开发的一款开源的安卓系统框架。
 
 它是一款特殊的安卓App，其主要功能是提供一个新的应用平台，玩家们安装Xposed框架后，就能够通过Xposed框架搭建起的平台安装更多系统级的应用，实现诸多神奇的功能。
@@ -31,7 +30,7 @@ Github开源地址: [https://github.com/rovo89/Xposed](https://github.com/rovo89
 
 由于Xposed最大的弊端在于设备需要root，并且编写插件模块后需要重启手机（当然也有办法可以不用重启），所以有了VirtualApp。
 
-##### VirtualApp
+#### VirtualApp
 VirtualApp是一个App虚拟化引擎（简称VA）。
 
 VirtualApp在你的App内创建一个虚拟空间（构造了一个虚拟的systemserver），你可以在虚拟空间内任意的安装、启动和卸载APK，这一切都与外部隔离，如同一个沙盒。
@@ -45,14 +44,14 @@ VirtualApp主要技术用到了反射和动态代理来实现的
 
 Github开源地址：[https://github.com/asLody/VirtualApp](https://github.com/asLody/VirtualApp)
 
-##### VirtualXposed
+#### VirtualXposed
 VirtualXposed就是基于VirtualApp和epic 在非ROOT环境下运行Xposed模块的实现（支持5.0~8.1)。
 
 Github开源地址：[https://github.com/android-hacker/VirtualXposed](https://github.com/android-hacker/VirtualXposed)
 
 
 ### 二、编写Xposed插件
-##### 1.编写测试app
+#### 1.编写测试app
 先编写被劫持的测试app，测试劫持一个app的方法。
 代码如下：
 
@@ -68,7 +67,7 @@ Github开源地址：[https://github.com/android-hacker/VirtualXposed](https://g
 
 点击button后textview显示Jack
 
-##### 2.编写Xposed插件
+#### 2.编写Xposed插件
 首先导入Xposed的api库
 
 方法1：
@@ -106,7 +105,7 @@ Download有两个jar包:
         androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
         provided files('libs/api-82.jar')
     }
-##### 3.修改AndroidManifest.xml文件
+#### 3.修改AndroidManifest.xml文件
 在Application标签里面加三个meta-data
 
         <!-- 是否是xposed模块，xposed根据这个来判断是否是模块 -->
@@ -122,7 +121,7 @@ Download有两个jar包:
             android:name="xposedminversion"
             android:value="53" />
 
-##### 4.编写hook类
+#### 4.编写hook类
 创建一个类，实现IXposedHookLoadPackage接口，重写handleLoadPackage方法，我这里创建了一个HookMain类。
 
 代码如下：
@@ -159,7 +158,7 @@ Download有两个jar包:
        }
     }
   
-##### 5. 创建xposed_init文件
+#### 5. 创建xposed_init文件
 xposed_init 文件是 Xposed 模块的入口文件，Xposed 就是通过该文件找到对应的函数入口。
 
 
@@ -171,7 +170,7 @@ AS工程 app目录下右键，新建-folder-assets：
 
 com.hookdemo.HookMain
 
-##### 6.运行程序
+#### 6.运行程序
 首先将VirtualXposed安装到手机中
 
 然后再VirtualXposed中添加测试应用以及hook模块
