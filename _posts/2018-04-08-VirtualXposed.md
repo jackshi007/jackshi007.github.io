@@ -53,6 +53,7 @@ Github开源地址：[https://github.com/android-hacker/VirtualXposed](https://g
 ### 二、编写Xposed插件
 #### 1.编写测试app
 先编写被劫持的测试app，测试劫持一个app的方法。
+
 代码如下：
 
     
@@ -105,7 +106,10 @@ Download有两个jar包:
         androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
         provided files('libs/api-82.jar')
     }
+
+
 #### 3.修改AndroidManifest.xml文件
+
 在Application标签里面加三个meta-data
 
         <!-- 是否是xposed模块，xposed根据这个来判断是否是模块 -->
@@ -122,6 +126,7 @@ Download有两个jar包:
             android:value="53" />
 
 #### 4.编写hook类
+
 创建一个类，实现IXposedHookLoadPackage接口，重写handleLoadPackage方法，我这里创建了一个HookMain类。
 
 代码如下：
