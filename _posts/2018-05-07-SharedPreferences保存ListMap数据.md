@@ -1,6 +1,6 @@
 ---
 layout:     post                    # 使用的布局（不需要改）
-title:      SharedPreferences保存List<Map<String, Object>>数据     # 标题 
+title:      SharedPreferences保存ListMap数据     # 标题 
 subtitle:            #副标题
 date:       2018-05-07               # 时间
 author:     Jack                      # 作者
