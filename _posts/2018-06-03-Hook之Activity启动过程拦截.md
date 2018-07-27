@@ -107,7 +107,6 @@ public ActivityResult execStartActivity(
 ```java
 public abstract class ActivityManagerNative extends Binder implements IActivityManager
 ```
-
 继承了Binder，实现了一个IActivityManager接口，这就是为了远程服务通信做准备的"Stub"类，一个完整的AID L有两部分，一个是个跟服务端通信的Stub,一个是跟客户端通信的Proxy。ActivityManagerNative就是Stub，最终由ActivityManagerService启动的。这是android框架典型的跨进程通信。
 
 ```java
