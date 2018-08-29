@@ -622,9 +622,13 @@ public DexPathList(ClassLoader definingContext, String dexPath,
 ```
 
 参数说明：
+
 参数一：BaseDexClassLoader本身
+
 参数二：apk/dex/jar路径
+
 参数三：系统的一些文件库
+
 参数四：dex文件路径（参数二apk或jar解压输出文件库路径）
 
 通过makeDexelements(...)方法我们获取了一个 Element[] dexElements数组。保存了dex文件的相关信息
@@ -690,22 +694,23 @@ public Class findClass(String name, List<Throwable> suppressed) {
 ```
 
 ```java
-loadClassBinaryName(String name, ClassLoader loader, List<Throwable> suppressed) 方法返回调用了
-defineClass(String name, ClassLoader loader, int cookie,List<Throwable> suppressed) 而该方法调用了
+loadClassBinaryName(String name, ClassLoader loader, List<Throwable> suppressed) 
+//方法返回调用了
+defineClass(String name, ClassLoader loader, int cookie,List<Throwable> suppressed) 
+//而该方法调用了
 private static native Class defineClassNative(String name, ClassLoader loader, int cookie)
-        throws ClassNotFoundException, NoClassDefFoundError; 此方法为natvie方法
+        throws ClassNotFoundException, NoClassDefFoundError; 
+//此方法为natvie方法
 ```
 
 ### 总结
 
-```
-第一步：执行ClassLoader的loadClass(String className)方法
-第二步：执行BaseDexClassLoader的findClass(String classNmae)方法
-第三步：执行DexPathList的findClass（String className）方法
-第四步：执行DexFile的loadClassBinaryName方法
-第五步：执行DexFile的defindClass方法
-第六步：C或C++的defineClassNative方法
-```
+**第一步：执行ClassLoader的loadClass(String className)方法**
+**第二步：执行BaseDexClassLoader的findClass(String classNmae)方法**
+**第三步：执行DexPathList的findClass（String className）方法**
+**第四步：执行DexFile的loadClassBinaryName方法**
+**第五步：执行DexFile的defindClass方法**
+**第六步：C或C++的defineClassNative方法**
 
 
 
