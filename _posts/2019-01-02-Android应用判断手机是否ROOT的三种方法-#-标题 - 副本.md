@@ -4,7 +4,7 @@ title:     Android应用判断手机是否ROOT的三种方法   # 标题
 subtitle:       如何查看手机是否ROOT #副标题
 date:       2019-01-02              # 时间
 author:     Jack                      # 作者
-header-img: img/post-bg-tibet.jpg  #这篇文章标题背景图片
+header-img: img/post-bg-miui-ux.jpg  #这篇文章标题背景图片
 catalog: true                       # 是否归档
 tags:                               #标签
     - Android 
