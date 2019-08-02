@@ -71,7 +71,7 @@ tags:                               #标签
 - 构建JobInfo 实例，指定 JobService任务实现类及其执行条件
 - 通过JobScheduler 实例加入到任务队列
 
-#### · 1 自定义[Jobservice](https://link.jianshu.com?t=https://developer.android.com/reference/android/app/job/JobService.html)类
+### 3.1 自定义[Jobservice](https://link.jianshu.com?t=https://developer.android.com/reference/android/app/job/JobService.html)类
 
 JobService是从Service中扩展出来的一个新类，继承Service。但是有两个重要的新接口。
 
@@ -219,7 +219,7 @@ public class JobSchedulerService extends JobService {
 
 ------
 
-#### · 2 创建JobScheduler对象
+###  3.2 创建JobScheduler对象
 
 在完成JobSchedulerService的构建以及绑定Service节点之后，接下来进行的是如何与JobScheduler API交互。
 
@@ -289,7 +289,7 @@ if(mJobScheduler.schedule(JobInfo job) < 0){
 
 最后如果需要**停止一个任务**，就通过JobScheduler中，`cancel(int jobId)`来实现(所以之前在Builer中的指定id又有了重要作用)；如果想**取消所有的任务**，可以调用JobScheduler对象的`cancelAll()`来实现。
 
-### 四、Jobscheduler使用
+## 4、Jobscheduler使用
 
 在上边初略的讲解了job scheduler的一些使用方法，下边通过一个用例来加深一下理解。
 
@@ -612,7 +612,7 @@ public class MyJobService extends JobService {
 
 虽然在service里边只是简单地进行了一个我们设置的耗时操作，但是通过以上的例子应该很容易理解JobScheduler的使用了。在某些条件下（充电，网络连接【可以指定特定的状态】，设备空闲）JobScheduler可以更优秀的完成我们的触发型任务。
 
-### 五、应用：
+## 5、应用：
 
 似乎都很热衷于应用的保活，很多地方都是将jobScheduler应用于Service杀不死，进一步拉应用的状态
  [使用JobScheduler进行开机自启动](https://www.jianshu.com/p/e0a06d5abf98)
