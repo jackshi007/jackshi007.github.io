@@ -23,9 +23,9 @@ tags:                               #标签
 >它可以让你在一个已经编译好的类中添加新的方法，或者是修改已有的方法。
 > 它不要求你对字节码方面具有多么深入的了解，同样的，它也允许你忽略被修改的类本身的细节和结构。
 
-javassist官网：http://www.javassist.org/
+javassist官网：[http://www.javassist.org/](http://www.javassist.org/)
 
-github地址：https://github.com/jboss-javassist/javassist
+github地址：[https://github.com/jboss-javassist/javassist](https://github.com/jboss-javassist/javassist)
 
 ## 2.主要的类
 
@@ -218,7 +218,10 @@ public static void addField(){
 ## 参考链接
 
 [javassist官网](https://jboss-javassist.github.io/javassist/tutorial/tutorial.html)
+
 [在不重新编译的情况下直接修改Java Class文件中的内容](https://lucumt.info/post/modify-java-class-file-content-directly)
+
 [修改字节码工具javassist的使用小记](https://blog.fengcl.com/2017/06/17/use-of-javassist)
+
 
 
