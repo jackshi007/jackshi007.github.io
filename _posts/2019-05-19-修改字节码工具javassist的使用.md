@@ -46,7 +46,7 @@ github地址：[https://github.com/jboss-javassist/javassist](https://github.com
 - CtMethod.insertAt
 - CtMethod.setBody
 
-## 4、修改Class文件中的方法
+## 4.修改Class文件中的方法
 
 ```java
 package com.lucumt;
@@ -143,7 +143,7 @@ public class UpdateMethod {
   *The parameters passed to the target method are accessible with $1, $2, … instead of the original parameter names. $1 represents the first parameter, $2 represents the second parameter, and so on. The types of those variables are identical to the parameter types. $0 is equivalent to this. If the method is static, $0 is not available.*
   从中可知，方法中的**参数从 *$1* 开始，若该方法为非 *static* 方法，可以用 *$0* 来表示该方法实例自身，若该方法为 *static* 方法，则 *$0* 不可用**
 
-## 5、在Class文件中增加方法
+## 5.在Class文件中增加方法
 
 ```java
 public static void addMethod(){
@@ -182,7 +182,7 @@ public static void addMethod(){
 
 
 
-## 6、在Class文件中增加成员变量
+## 6.在Class文件中增加成员变量
 
 ```java
 public static void addField(){
